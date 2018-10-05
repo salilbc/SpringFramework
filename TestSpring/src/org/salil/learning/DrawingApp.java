@@ -17,7 +17,10 @@ public class DrawingApp {
         //Triangle triangle= (Triangle) context.getBean("triangle");
         //triangle.draw();
 
-        Shape shape= (Shape) context.getBean("triangle");
+        Shape shape= (Shape) context.getBean("circle");
         shape.draw();
+
+        //System.out.println(context.getMessage("greeting", null, "Default greeting", null));
+
     }
 }
