@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/tool"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       xmlns:context="http://www.springframework.org/schema/context">
 
-   <bean id="triangle" class="org.salil.learning.Triangle">
+<!--   <bean id="triangle" class="org.salil.learning.Triangle">
         <property name="pointA" ref="pointA" />
         <property name="pointB" ref="pointB" />
         <property name="pointC" ref="pointC" />
-    </bean>
+    </bean>-->
+    <context:annotation-config/>
 
     <bean id="pointA" class="org.salil.learning.Point">
-        <property name="x" value="5"/>
-        <property name="y" value="5"/>
+        <qualifier value="circleRelated" />
+        <property name="x" value="6"/>
+        <property name="y" value="6"/>
     </bean>
 
-   <bean id="pointB" class="org.salil.learning.Point">
+  <bean id="pointB" class="org.salil.learning.Point">
         <property name="x" value="-20"/>
         <property name="y" value="0"/>
     </bean>
@@ -24,12 +27,11 @@
         <property name="y" value="0"/>
     </bean>
 
-<!--    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+<!--   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations" value="pointsconfig.properties"/>
     </bean>-->
 
     <bean id="circle" class="org.salil.learning.Circle">
-        <property name="center" ref="pointA" />
     </bean>
 
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
@@ -41,7 +43,6 @@
     </bean>
 
 
-    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
-    <!--<context:annotation-config/>-->
+    <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
 
 </beans>
