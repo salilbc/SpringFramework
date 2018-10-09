@@ -1,5 +1,9 @@
-package com.intuit.day02;
+package com.intuit.service;
 
+import com.intuit.domain.Account;
+import com.intuit.dao.AccountsRepository;
+import com.intuit.domain.Statements;
+import com.intuit.dao.StatementsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

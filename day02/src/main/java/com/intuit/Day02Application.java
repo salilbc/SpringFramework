@@ -1,4 +1,4 @@
-package com.intuit.day02;
+package com.intuit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

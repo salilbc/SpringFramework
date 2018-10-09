@@ -1,6 +1,6 @@
-package com.intuit.day02;
+package com.intuit.dao;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.intuit.domain.Statements;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

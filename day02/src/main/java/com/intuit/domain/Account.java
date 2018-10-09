@@ -1,4 +1,4 @@
-package com.intuit.day02;
+package com.intuit.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
